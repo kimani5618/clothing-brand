@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(108, 175, 226);
+        }
+     .body{
+            width: 100%;
+            background: linear-gradient(to top,rgb(102, 195, 195),rgba(0,0, 0,0.5)),url("download.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 109vh;
+            margin-bottom: 50px;            
+        }
+        .navbar {
+            display: flex;
+            padding: 14px,16px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .icon{
+            color: bisque;
+        }
+        .logo{
+            color: white;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .menu ul{
+            float: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        } 
+        .menu ul {
+            list-style-type: none;
+            margin-left: 62px;
+            margin-top: 27px;
+            font-size: 14px;
+        }
+        .menu ul  a {
+            text-decoration: none;
+            color: white;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4 ease-in-out;
+            text-transform: uppercase;
+        }
+        .menu ul a:hover{
+            color: rgb(5, 5, 5);
+            
+        }
+        .branch{
+            border: 1px solid;
+            border-radius: 10px;
+            display: flex;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+        }
+        .branch img{
+            border-radius: 10px;
+        letter-spacing: 3px;      
+        font-family: 'Times New Roman', Times, serif; 
+        }
+        .team-container{
+            
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+
+        .team-intro {
+            background-color: #F1FAEE;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .team-members {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .team {
+            display: flex;
+            gap: 20px;
+            background-color: #F1FAEE;
+            padding: 15px;
+            border-radius: 10px;
+            align-items: center;
+        }
+        #team-section h3{
+            font-size: 25px;
+            color: white;
+            position: relative;
+        }
+        .body h4{
+            color: white;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 380px;
+        }
+        footer{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+          @media (min-width: 340px) and (max-width: 1024px){
+          .body{
+            width: 1250px;
+          }
+          #team-section{
+            width: 1250px;
+          }
+          footer{
+            text-align: center;
+          }
+        }
+        </style>
+</head>
+<body>
+    <section class="body">
+       <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CLEO CLOTHING</h2>
+
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="my project.html">home </a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="services.html">services</a></li>
+                    <li><a href="design.html">design</a></li>
+                </ul>
+            </div>
+        </div>
+        <h4>about us</h4>
+        </section>
+        
+    <section id="team-section">
+        <h3>more info;</h3>
+        <div class="team-container">
+            <!-- LEFT SIDE: Intro -->
+            <div class="team-intro">
+                <h3>Our offers</h3>
+                <section class="kim">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat officiis qui ipsum laboriosam iusto quae labore, aut aperiam itaque voluptates facere! Libero ex magni aliquam dolorum autem voluptatum ipsam pariatur.</p>
+                </section>
+            </div>
+
+            <!-- RIGHT SIDE: Team Members -->
+            <div class="team-members">
+                <div class="team">
+                    <img src="download (10).jpg" alt="our team" width="160" height="200">
+                    <section>
+                        <h4>Our main branch which is located in westland</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptas, culpa animi, nam autem assumenda quasi, est sint dignissimos aspernatur numquam obcaecati!</p>
+                    </section>
+                </div>
+                <div class="team">
+                    <img src="download (11).jpg" alt="our team" width="160" height="200"> 
+                    <section>
+                    <h4><strong><ins>Our branch in kilimani</ins></strong></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptas, culpa animi, nam autem assumenda quasi...</p>
+                    </section>
+                </div>
+                <div class="team">
+                    <img src="download (12).jpg" alt="our team" width="160" height="200">
+                    <section>
+                    <h4><strong><ins>Our branch in kileleshwa</ins></strong></h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptas, culpa animi, nam autem assumenda quasi...</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <b>&copycleo clothing</b>
+    </footer>
+</body>
+</html>

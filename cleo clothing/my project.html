@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .body{
+            width: 100%;
+            background: linear-gradient(to top,rgb(102, 195, 195),rgba(0,0, 0,0.5)),url("download.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 109vh;
+            margin-bottom: 50px;
+            
+        }
+        .navbar {
+            display: flex;
+            padding: 14px,16px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .icon{
+            color: bisque;
+        }
+        .logo{
+            color: white;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .menu ul{
+            float: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        } 
+        .menu ul {
+            list-style-type: none;
+            margin-left: 62px;
+            margin-top: 27px;
+            font-size: 14px;
+        }
+        .menu ul  a {
+            text-decoration: none;
+            color: white;
+            font-family: Arial;
+            font-weight: bold;
+            transition: 0.4 ease-in-out;
+            text-transform: uppercase;
+        }
+        .menu ul a:hover{
+            color: rgb(5, 5, 5);
+            
+        }
+        .search{
+            width: 300px;
+            float: left;
+            margin-left: 200px;
+        }
+        .srch{
+            font-family: 'Times New Roman';
+            width: 200px;
+            height: 40px;
+            background: transparent;
+            border: 1px solid white;
+            margin-top: 10px;
+            color: rgb(240, 240, 243);
+            border-right: none;
+            font-size: 16px;
+            float: left;
+            padding:0px 10px;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        .btn{
+            width:100px;
+            height:40px ;
+            background: rgb(1, 1, 1);
+            border: 1px solid white;
+            margin-top: 10px;
+            color: rgb(233, 233, 235);
+            font-size: 15px;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius:5px ;
+        }
+        .btn:focus{
+            outline: none;
+        }
+        .srch:focus{
+            outline: none;
+        }
+        .content{
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: rgb(249, 239, 239);
+            position: relative;
+        }
+        .content p{
+            padding-left: 20px;
+            padding-bottom: 25px;
+            letter-spacing: 1.2px;
+            line-height: 30px;
+            color: rgb(253, 249, 249);
+        }
+        .content h1{
+            font-size: 40px;
+            padding-left: 20px;
+            margin-top: 9%;
+            letter-spacing: 2px;
+        }
+        .cn {
+width: 160px;
+height: 40px;
+background:white;
+border: none;
+margin-bottom: 10px;
+margin-left: 20px;
+font-size: 18px;
+border-radius: 10px;
+cursor: pointer;
+        }
+        .content a{
+            text-decoration: none;
+            color: black;
+            transition: 1s ease;
+        }
+        .cn a:hover{
+            background-color: rgb(245, 155, 155);
+            color: black;
+            transition: 0.9s ease;
+        }
+        .content span {
+            color: rgb(37, 37, 255);
+            font-size: 40px;
+            margin-top: 10px;
+        }
+        .form{
+            width: 250px;
+            height: 350px;
+            background: linear-gradient(to top,rgb(102, 195, 195),rgba(0,0,0,0.5));
+            position: absolute;
+            top: 150px;
+            left: 870px;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .form h2{
+            width: 220px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            color: rgb(8, 8, 8);
+            font-size: 22px;
+            border-radius: 10px;
+            margin: 2px;
+            background-color: rgb(236, 236, 238);
+            padding: 8px;
+        }
+        .form input{
+            width: 240px;
+            height: 35px;
+            background: transparent;
+            padding: 2px;
+            border-bottom: 1px solid;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: white;
+            letter-spacing: 1px;
+            margin-top: 30px;
+        }
+        .form input:focus{
+            outline: none;
+        }
+        .btnn{
+            width: 240px;
+            height: 40px;
+            border: none;
+            margin-top: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: o.8s ease;
+        }
+        .btnn:hover{
+            background-color: rgb(48, 81, 244);
+            color: black;
+            box-shadow: 0 0 10px white;
+
+        }
+        .btnn a{
+            text-decoration: none;
+            color: rgb(11, 10, 10);
+            font-weight: bold;
+        }
+        .form .link{
+            color: rgba(242, 240, 240, 0.916);
+            margin-top: 10px;
+            font-size: 17px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .form .link a{
+            text-decoration: none;
+            color: white;
+        }
+        .liw{
+            color: white;
+            padding-top: 15px;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        #home{
+            border: 2px solid;
+            border-radius: 5px;
+            background-color: rgb(90, 151, 220);
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns:repeat(auto-fit ,minmax(200px,1fr));
+        }
+        
+#listing{
+    border: 1px solid;
+    border-radius: 5px;
+    padding-top: 20px;
+    border-radius: 5px;
+    background-color:#69a7e9;
+    border: 3px solid black;
+    height: 400px;
+}
+        
+#listing:hover{
+    background-color: rgb(249, 249, 249);
+    transition: 1s all ease;
+    transform: scale(1.10);
+}
+        #listing{
+            text-align: center;
+        }
+        .us{
+            border: 1px solid;
+            margin-top: 50px;
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(116, 228, 248) ;
+            color: rgb(7, 7, 7);
+            border-radius: 10px;
+            line-height: 150%;
+            letter-spacing:default;
+            font-size: 16px;
+        }
+        .us h3{
+            font-weight: bolder;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+   footer {
+      display: flex;
+      background-color: #7fd5ef9d;   /* dark background */
+      color: white;             /* white text */
+      padding: 30px;           /* space inside footer */
+      justify-content:space-around;
+      font-size: 14px;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin-top: 50px;
+      margin: 1px solid;
+      border-radius: 10px;
+    }
+    
+.fa-facebook{
+    color: blue;
+    font-size: 40px;
+}
+.fa-whatsapp{
+    color: green;
+    font-size: 40px;
+}
+.fa-x-twitter{
+    color: black;
+    font-size: 40px;
+}
+.fa-tiktok{
+    color: black;
+    font-size: 40px;
+}
+        @media (min-width: 340px) and (max-width: 1024px){
+          .body{
+            width: 1250px;
+          }
+          #home{
+            text-align: center;
+          }
+          .container{
+            grid-template-columns: auto;
+            text-align: center;
+          }
+          footer{
+            width: 1180px;
+          }
+          .us{
+            width: 1200px;
+          }
+
+        }
+        @media mi {
+            
+        }
+        .contact-details{
+            color: black;
+        }
+        .hours{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <section class="body">
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">CLEO CLOTHING</h2>
+
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="my project.html">home </a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="services.html">services</a></li>
+                    <li><a href="design.html">design</a></li>
+                </ul>
+            </div>
+<div class="search">
+    <input class="srch" type="search" placeholder="type to search">
+    <a href="#"> <button class="btn"><search>search</search></button></a>
+
+</div>
+</div>
+<section>
+    <div class="content">
+    <h1>we value &<br><span>appreciate our customers</span></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Rem nam asperiores unde quaerat praesentium eum,<br> facere expedita! Maiores amet ratione illum facere tempore,<br> expedita voluptatibus distinctio, similique, minima incidunt accusantium!</p>
+<button class="cn"><a href="#">login</a></button>
+    </div>
+</section>
+<div class="form">
+    <h2>login here</h2>
+    <input type="email" name="email" id="email" placeholder="enter email">
+    <input type="password" placeholder="enter password">
+    <button onclick="alert('do you want to login in with us')" class="btnn"><a href="login.html">login in</a></button>
+    <p class="link">don't have an account<br>
+    <a href="link">sign up here</a></p>
+    <p class="liw">login in with us</p>
+</div>
+</div>
+    </section>
+    <section id="home">
+        <h3>welcome to cleo clothing</h3>
+    </section>
+    <section class="container">
+    <section id="listing">
+        <img src="Men's Simple Casual Loose Retro Warm Sweater, Suitable For Autumn_Winter.jpg" alt="our product" height="300px" width="200px">
+        <p>one of our available product</p>
+    </section>
+        <section id="listing">
+        <img src="download (1).jpg" alt="our product" height="300px" width="200px">
+        <p>one of our available product</p>
+    </section>    <section id="listing">
+        <img src="download.jpg" alt="our product" width="200px" height="300px">
+        <p>one of our available product</p>
+    </section>
+    </section>
+    <section class="us">
+        <h3>our customers preview</h3>
+        <p>Cleo Clothing is a modern fashion brand that blends timeless elegance with contemporary style, offering versatile pieces designed to empower confidence and individuality. Known for its attention to detail, high-quality fabrics, and inclusive sizing, Cleo Clothing delivers collections that transition seamlessly from day to night. Whether you're dressing for the office, a night out, or a weekend getaway, Cleo's curated designs strike the perfect balance between comfort and sophistication. With a commitment to sustainability and ethical production, Cleo Clothing isn’t just about looking good—it’s about feeling good in every way.
+</p>
+    </section>
+    <footer>
+    
+    <div class="contact-details">
+        <h3>Contact Us</h3>
+      <p>Email: info@example.com</p>
+      <p>Phone: +254 720482587</p>
+      <p>Address: 123 Nairobi, Kenya</p>
+    </div>
+    
+    <div class="hours">
+         <h3>We are Open on:</h3>
+      <p>Monday-Saturday:6:00AM to 10:00PM</p>
+      <p>Sundays: 9:00AM-8:00PM</p>
+      <P>Public Holidays:6:00AM to 10:00PM</P>
+    </div>
+    <div>
+        <h3>follow us;</h3>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-tiktok"></i>
+    </div>
+    </footer>
+</body>
+<script>
+    button.onc
+</script>
+</html>
